@@ -10,7 +10,7 @@ class Solution:
                 buckets['l']-=1
                 recursive(parenthesis+'(')
                 buckets['l']+=1
-            if buckets['r']>0:
+            if buckets['l']<buckets['r'] and buckets['r']>0:
                 buckets['r']-=1
                 recursive(parenthesis+')')
                 buckets['r']+=1

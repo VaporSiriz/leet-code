@@ -2,8 +2,7 @@ class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         # 1. row
         for i in range(0, 9):
-            row = board[i]
-            number_list = [ field for field in row if field != "." ]
+            number_list = [ field for field in board[i] if field != "." ]
             # print(row)
             if len(number_list) != len(set(number_list)):
                 return False
